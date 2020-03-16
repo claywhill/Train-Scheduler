@@ -12,24 +12,38 @@ firebase.initializeApp(config);
 
 var database = firebase.database();
 
-var trainName = "";
-var destination = "";
-var firstTrain = "";
-var frequency = 0;
+$("#submit").on("click", function(event) {
+  event.preventDefault();
 
-trainName = $("#trainName").val().trim();
-destination = $("#destination").val().trim();
-firstTrain = $("#firstTrain").val().trim();
-frequency = $("#frequency").val().trim();
+var trainName = $("#trainName-input").val().trim();
+var destination = $("#destination-input").val().trim();
+var firstTrain = moment($("#firstTrain-input").val().trim().format("HH:mm"));
+var frequency = $("#frequency-input").val().trim();
 
+var newTrain = {
+  train: trainName,
+  stop: destination,
+  begin: firstTrain,
+  occur: frequency
+};
 
-database.ref().set({
-trainName: trainName,
-destination: destination,
-firstTrain: firstTrain,
-frequency: frequency
+database.ref().push(newTrain);
+
+console.log(newTrain.train);
+console.log(newTrain.stop);
+console.log(newTrain.begin);
+console.log(newTrain.occur);
+
+alert("New Train Successfully Scheduled");
+
+$("#trainName-input").val("");
+$("#destination-input").val("");
+$("#firstTrain-input").val("");
+$("#frequency-input").val("");
 });
 
-database.ref().on("value", function(snapshot) {
-    console.log(snapshot.val());
-})
+
+
+// database.ref().on("value", function(snapshot) {
+    
+// })

@@ -16,8 +16,8 @@
             <th id="namedisplay" scope="col">Train Name</th>
             <th id="destinationdisplay" scope="col">Destination</th>
             <th id="frequencydisplay" scope="col">Frequency (min)</th>
-            <th scope="col">Next Arrival</th>
-            <th scope="col">Minutes Away</th>
+            <th id="nextarrivaldisplay" scope="col">Next Arrival</th>
+            <th id="minutesawaydisplay" scope="col">Minutes Away</th>
           </tr>
         </thead>
         <tbody>
@@ -62,20 +62,20 @@
     <br>
     <form>
         <div class="form-group">
-          <label id="trainName" for=trainName>Train Name</label>
-          <input type="letters" class="form-control" id="trainName" name="trainName">
+          <label id="trainName-input" for=trainName>Train Name</label>
+          <input type="text" class="form-control" id="trainName" name="trainName">
         </div>
         <div class="form-group">
-          <label id="destination" for="destination">Destination</label>
+          <label id="destination-input" for="destination">Destination</label>
           <input type="text" class="form-control" id="destination" name="destination">
         </div>
         <div class="form-group">
-            <label id="firstTrain" for="initialTime">First Train Time (HH:mm - military time)</label>
-            <input type="time" class="form-control" id="initialTime" name="initialTime">
+            <label id="firstTrain-input" for="initialTime">First Train Time (HH:mm - military time)</label>
+            <input type="text" class="form-control" id="initialTime" name="initialTime">
           </div>
           <div class="form-group b">
-            <label id="frequency" for=frequency>Frequency (min)</label>
-            <input type="number" class="form-control" id="frequency" name="frequency">
+            <label id="frequency-input" for=frequency>Frequency (min)</label>
+            <input type="text" class="form-control" id="frequency" name="frequency">
           </div>
         <button id="submit" type="submit" class="btn btn-primary">Submit</button>
       </form>
