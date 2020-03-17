@@ -9,7 +9,6 @@
     <title>Train Scheduler</title>
 </head>
 <body>
-
     <table class="table">
         <thead>
           <tr>
@@ -21,61 +20,26 @@
           </tr>
         </thead>
         <tbody>
-          <tr>
-            <th scope="row">Crazy Train</th>
-            <td>Ozzy's House</td>
-            <td>5 </td>
-            <td>2:00 PM</td>
-            <td>2</td>
-          </tr>
-          <tr>
-            <th scope="row">Rock n' Roll Train</th>
-            <td>Off the Track</td>
-            <td>10</td>
-            <td>9:39 PM</td>
-            <td>8</td>
-          </tr>
-          <tr>
-            <th scope="row">Polar Express</th>
-            <td>North Pole</td>
-            <td>60</td>
-            <td>12:00 AM</td>
-            <td>60</td>
-          </tr>
-          <tr>
-            <th scope="row">Hell Bound Train</th>
-            <td>Hell</td>
-            <td>666</td>
-            <td>6:59 PM</td>
-            <td>666</td>
-          </tr>
-          <tr>
-            <th scope="row">Gravy Train</th>
-            <td>Rin Tin Tin</td>
-            <td>7</td>
-            <td>7:00 AM</td>
-            <td>8</td>
-          </tr>
         </tbody>
     </table>
     <br>
     <br>
     <form>
         <div class="form-group">
-          <label id="trainName-input" for=trainName>Train Name</label>
-          <input type="text" class="form-control" id="trainName" name="trainName">
+          <label for=trainName>Train Name</label>
+          <input id="trainName-input" type="text" class="form-control" id="trainName" name="trainName">
         </div>
         <div class="form-group">
-          <label id="destination-input" for="destination">Destination</label>
-          <input type="text" class="form-control" id="destination" name="destination">
+          <label for="destination">Destination</label>
+          <input id="destination-input" type="text" class="form-control" id="destination" name="destination">
         </div>
         <div class="form-group">
-            <label id="firstTrain-input" for="initialTime">First Train Time (HH:mm - military time)</label>
-            <input type="text" class="form-control" id="initialTime" name="initialTime">
+            <label for="initialTime">First Train Time (HH:mm - military time)</label>
+            <input id="firstTrain-input" type="text" class="form-control" id="initialTime" name="initialTime">
           </div>
           <div class="form-group b">
-            <label id="frequency-input" for=frequency>Frequency (min)</label>
-            <input type="text" class="form-control" id="frequency" name="frequency">
+            <label for=frequency>Frequency (min)</label>
+            <input id="frequency-input" type="text" class="form-control" id="frequency" name="frequency">
           </div>
         <button id="submit" type="submit" class="btn btn-primary">Submit</button>
       </form>
